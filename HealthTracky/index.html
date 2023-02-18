@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealTracky</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div id="heading">
+            <ion-icon name="heart-half"></ion-icon><span>HealTracky Reckoner</span>
+        </div>
+        <div id="ui" class="ui">
+            <div class="gender">
+                <button id="male" class="male active" onclick="setMan()">
+                    <ion-icon name="man"></ion-icon> <span class="genderName">
+                        Man/Boy
+                    </span>
+                </button>
+                <button id="female" class="female" onclick="setWoman()">
+                    <ion-icon name="woman"></ion-icon> <span class="genderName">
+                        Woman/Girl
+                    </span>
+                </button>
+            </div>
+            <div class="value">
+                <span class="valueName">
+                    Height in cm of Patient
+                </span>
+                <div class="rangeRow">
+                    <input type="range" min="0" max="300" value="158" id="height" oninput="setrange()">
+                    <span id="heightValue" class="valueNumber">
+                        158
+                    </span>
+                </div>
+            </div>
+            <div class="value">
+                <span class="valueName">
+                    Weight in Kg of Patient
+                </span>
+                <div class="rangeRow">
+                    <input type="range" min="0" max="200" value="75" id="weight" oninput="setrange()">
+                    <span id="weightValue" class="valueNumber">
+                        75
+                    </span>
+                </div>
+            </div>
+            <div class="value">
+                <span class="valueName">
+                    Age of a Patient
+                </span>
+                <div class="rangeRow">
+                    <input type="range" min="0" max="150" value="37" id="age" oninput="setrange()">
+                    <span id="ageValue" class="valueNumber">
+                        37
+                    </span>
+                </div>
+            </div>
+            <button onclick="calculate()" class="submit">
+                Estimate
+            </button>
+        </div>
+        <div id="result" class="result hide">
+            <div class="circular-progress">
+                <div class="value-container">
+                    <span id="progressNumber">
+                        19%
+                    </span>
+                    <span id="progressResult">
+                        Normal
+                    </span>
+                </div>
+            </div>
+            <div id="suggesion">
+                Stay hydrated with water to maintain a healthy weight.
+            </div>
+            <button id="recalculate" class="submit" onclick="reCalculate()">
+                ReEstimate
+            </button>
+        </div>
+    </div>
+<!--Script for javascript-->
+<script src="index.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

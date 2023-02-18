@@ -1,0 +1,261 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: linear-gradient(135deg, #f90505, #df0bf7);
+    --secondary-color: linear-gradient(135deg, #e9681d, #ebca22);
+    --accent-color: #597ce6;
+}
+
+html{
+    font-size: 65%;
+}
+/***** Global css ends here *****/
+
+/***** main css starts here *****/
+body{
+    background: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 8em 1em;
+}
+
+.container{
+    width: 110%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.5);
+}
+
+.ui, .result{
+    padding: 1em 0em;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 5px;
+}
+/***** main css ends here *****/
+
+/***** css for heading starts here *****/
+#heading{
+    background: var(--secondary-color);
+    padding: 1.5em;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: 610;
+}
+/***** css for heading ends here *****/
+ion-icon {
+    font-size: 24px;
+  }
+/***** css for gender starts here *****/
+.gender{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1em;
+}
+
+.male, .female{
+    border: none;
+    outline: none;
+    background: var(--primary-color);
+    color: white;
+    width: 45%;
+    padding: 1em;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.genderName{
+    margin-left: 0.6em;
+}
+
+.active{
+    background: var(--secondary-color);
+    box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.6);
+}
+/***** css for gender ends here *****/
+
+/***** css for sliders starts here *****/
+.value{
+    width: 100%;
+    box-shadow: 0px 3px 6px rgb(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.rangeRow{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5em;
+}
+
+.valueName{
+    font-size: 1rem;
+}
+
+input[type="range"]{
+    width: 96%;
+    height: 3.5px;
+    appearance: none;
+    background: linear-gradient(135deg, #05ea8e, #0bd4f7);
+    border-radius: 3.3px;
+    outline: none;
+}
+
+input[type="range"]::webkit-slider-thumb{
+    appearance: none;
+    height: 15px;
+    width: 15px;
+    background: linear-gradient(135deg, #05ea8e, #0bd4f7);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.valueNumber{
+    margin-left: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    background: linear-gradient(135deg, #05ea8e, #0bd4f7);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 49%;
+}
+/***** css for sliders ends here *****/
+
+/***** css for submit starts here *****/
+.submit{
+    margin-top: 1.2em;
+    margin-bottom: 0.5em;
+    border: none;
+    outline: none;
+    background: var(--secondary-color);
+    color: white;
+    width: 50%;
+    padding: 1.2em;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+/***** css for submit ends here *****/
+
+/***** css for result starts here *****/
+.circular-progress{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: conic-gradient(#f77d0b 80deg, #fffcca 80deg);
+}
+
+.circular-progress:before{
+    content: "";
+    position: absolute;
+    height: 84%;
+    width: 84%;
+    background: white;
+    border-radius: 50%;
+}
+
+.value-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#progressNumber, #progressResult{
+    font-weight: 900;
+    font-size: 1.4rem;
+    margin-bottom: 0.2rem;
+}
+
+#suggesion{
+    margin-top: 1.3em;
+    margin-bottom: 0.5em;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.hide{
+    display: none;
+}
+/***** css for result ends here *****/
+
+/***** css for medium to large screens starts here *****/
+@media only screen and (min-width: 350px){
+    .gender{
+        margin-bottom: 2em;
+    }
+    .male, .female{
+        font-size: 1.5rem;
+    }
+    .ui, .result{
+        padding: 2em 0em;
+    }
+    .value{
+        padding: 2em;
+    }
+    .valueName{
+        font-size: 1.4rem;
+    }
+    .rangeRow{
+        margin-top: 2em;
+    }
+    .submit{
+        margin-top: 1.5em;
+        font-size: 1.6rem;
+    }
+    input[type="range"]{
+        height: 5px;
+    }
+    input[type="range"]::webkit-slider-thumb{
+        height: 20px;
+        width: 20px;
+    }
+    .circular-progress{
+        height: 250px;
+        width: 250px;
+    }
+    #progressNumber, #progressResult{
+        font-size: 2.3rem;
+    }
+    .suggesion{
+        font-size: 2rem;
+    }
+}
